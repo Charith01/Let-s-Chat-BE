@@ -1,15 +1,15 @@
 import mariadb
-
+from app.config import env
 
 MYSQL_PORT=3306
 class MariaDbConnector(object):
     def __init__(self):
         self.db_conn = None
         self.db_properties = {
-            'host': "localhost",
-            'user': "root",
-            'password': "Cherry2001",
-            'database': "lets_chat",
+            'host': env.DB_URL,
+            'user': env.DB_USER,
+            'password': env.DB_PASS,
+            'database': env.DB_NAME,
             'port': MYSQL_PORT
         }
 
