@@ -17,7 +17,7 @@ def create_user(input:dict):
     resp = service_obj.create_user(input)
     return resp
 
-@users_router.post("/validate-user")
+@users_router.post("/login")
 def validate_user(input:dict):
     print("enter validate_user controller")
     service_obj=UsersService()
